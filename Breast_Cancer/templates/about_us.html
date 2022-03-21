@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/static/css/about_us.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo" class="logo-feature">
+            <img src="static/images/logo1.png" alt="HealingEquilibrium.com">
+        </div>
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="/contact-us">Contact Us</a></li>
+            {% if current_user.is_authenticated %}
+            <li class="item"><a href="/prediction">Prediction</a></li>
+            {% endif %}
+        </ul>
+        {% if not current_user.is_authenticated %}
+        <ul id="item-right1">
+            <li><a href="/log-in">Sign In</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+        </ul>
+        {% else %}
+        <ul id="item-right2">
+            <li id="lout"><a href="/log-out">Log Out</a></li>
+            <li id="name"><p>Welcome, {{current_user.username}}</p></li>
+        </ul>
+        {% endif %}
+    </nav>
+    <section>
+        <div class="imgBx">
+            <img src="static/images/pexels-karolina-grabowska-4047186.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>About Us</h2>
+                <p>Cancer is amongst the deadliest disease that a human can get affected with. If the cancer is detected at an early stage, then about 50% of cancers can be prevented & cured. Otherwise, it may lead to a very critical situation and may even cause death. Hence, this makes it even more necessary to have a system or technology that can help doctors detect cancer at an early stage where it can be treated effectively.</p>
+                <p>To solve this problem using advanced technological solutions & artificial intelligence, we have come up with a Cancer Prediction System using Machine Learning algorithms.</p>
+                <p>This system takes a statistical approach by employing probabilistic & optimization techniques to draw out a result based on past datasets. This evaluation technique aims at helping doctors & pathologists to detect cancer at an early stage where it can be prevented & cured, thereby saving many lives.</p>
+                <p>Here doctors get instant guidance on their Cancer disease through an intelligent system online. The Cancer Disease Prediction web application is an end user support and online consultation project. The application is fed with various details and the Cancer disease associated with those details.</p>
+            </div>
+        </div>
+    </section>
+</body>

@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar ul li.item{
+    padding-left: 15px;
+}
+.logo-feature img{
+    border-radius: 50%;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* width: 100vw; */
+}
+#logo{
+    margin: 5px 20px;
+}
+#logo img{
+    height: 70px;
+    margin: 1px 1px;
+}
+ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color:blueviolet;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    font-family: 'Special Elite', cursive;
+}
+#navbar ul li a{
+    color: black;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: white;
+    background-color: black;
+}
+
+
+section{
+    position :relative;
+    width: 100%;
+    height: 88.5vh;
+    display: flex;
+}
+
+section .imgBx{
+    position: relative;
+    width: 50%;
+    height: 100% ;
+}
+section .imgBx::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,#ff538d,#47c5ff);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+section .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+section .contentBx{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(230, 230, 230, 0.856);
+}
+
+section .contentBx .formBx{
+    width: 50%;
+}
+section .contentBx .formBx h2{
+    color:rgb(77, 77, 77);
+    font-weight: 600;
+    font-size: 1.8rem;
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid rgb(0, 182, 214);
+    display: inline-block;
+    letter-spacing: 1px;
+}
+section .contentBx .formBx .inputBx{
+    margin-bottom: 10px;
+}
+section .contentBx .formBx .inputBx span{
+    margin-bottom: 5px;
+    display: inline-block;
+    color: rgb(77, 77, 77);
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+section .contentBx .formBx .inputBx input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 700;
+    border: 2px solid rgb(77, 77, 77);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: rgb(0, 70, 110);
+    background: transparent;
+    border-radius: 30px ;
+}
+section .contentBx .formBx .inputBx input[type="submit"]{
+    background: rgb(0, 197, 231);
+    color: black;
+    outline: none;
+    border: 2px solid rgb(77, 77, 77);
+    font-weight: 500;
+    cursor: pointer;
+}
+#sign-in{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#sign-in:hover{
+    color: white;
+}
+section .contentBx .formBx .inputBx input[type="submit"]:hover{
+    background: black;
+}
+section .contentBx .formBx .remember{
+    margin-bottom: 10px;
+    color: rgb(77, 77, 77);
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 1px;
+}
+section .contentBx .formBx .remember label input[type="checkbox"]{
+    -webkit-box-shadow: 1px 0px 0px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 1px 0px 0px 1px rgb(0, 0, 0);
+    box-shadow: 0px 0px 0px 1px rgb(0, 0, 0);
+}
+section .contentBx .formBx .inputBx p{
+    margin-bottom: 10px;
+    color: rgb(77, 77, 77);
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 1px;
+}
+section .contentBx .formBx .inputBx p a{
+    color: rgb(0, 62, 104);
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 1px;
+}
+
+section .contentBx .formBx h3{
+    color: rgb(66, 66, 66);
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+    margin: 50px 0 10px;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+section .contentBx .formBx .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .contentBx .formBx .icons li{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 197, 231) ;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 0 7px;
+    cursor: pointer;
+}
+section .contentBx .formBx .icons li img{
+    display: flex;
+    width: 35px;
+    height: 35px;
+}
+section .contentBx .formBx .icons li:hover{
+    background: black;
+    border: 2px solid white;
+}
+section .contentBx .formBx .icons li img:hover{
+    filter: invert(1);
+}
+
+@media (max-width : 768px){
+    section .imgBx{
+        position: absolute;
+        width:100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    section .contentBx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .contentBx .formBx{
+        width: 100%;
+        padding: 5px;
+        background: rgba(255, 255, 255, 0.603);
+        margin: 30px;
+    }
+    section .contentBx .formBx h3{
+        color :rgb(0, 0, 0);
+        text-align: center;
+        margin: 30px 0 10px;
+        font-weight: 500;
+    }
+}

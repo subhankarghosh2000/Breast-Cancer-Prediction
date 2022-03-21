@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo" class="logo-feature">
+            <img src="static/images/logo1.png" alt="HealingEquilibrium.com">
+        </div>
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="/about-us">About Us</a></li>
+            <li class="item"><a href="/contact-us">Contact Us</a></li>
+        </ul>
+        {% if not current_user.is_authenticated %}
+        <ul id="item-right1">
+            <li><a href="/log-in">Sign In</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+        </ul>
+        {% else %}
+        <ul id="item-right2">
+            <li id="lout"><a href="/log-out">Log Out</a></li>
+            <li id="name"><p>Welcome, {{current_user.username}}</p></li>
+        </ul>
+        {% endif %}
+    </nav>
+    <section id="home">
+        {% if not current_user.is_authenticated %}
+        <a href="/log-in"><button class="pushable"><span class="front">Get Started</span></button></a>
+        {% else %}
+        <a href="/prediction"><button class="pushable"><span class="front">Get Started</span></button></a>
+        {% endif %}
+        <img src="static/images/img-removebg-preview.png" id="obj-one">
+        <img src="static/images/Healing_Equilibrium-removebg-preview1.png" id="obj-two">
+        <div id="message">
+            <h1>Hey Doctors</h1>
+        </div>
+        <div id="message1">
+            <p>Lets ease your job</p>
+        </div>
+    </section>
+</body>
+</html>

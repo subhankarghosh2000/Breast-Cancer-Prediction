@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navbar ul.item-right{
+    padding-left: 500px;
+}
+#navbar ul li.item{
+    padding-left: 10px;
+}
+.logo-feature img{
+    border-radius: 50%;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 4vw;
+}
+#logo{
+    margin: 5px 20px;
+}
+#logo img{
+    height: 55px;
+    margin: 1px 1px;
+}
+ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color:rgb(0, 197, 231);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    font-family: 'Special Elite', cursive;
+    font-weight: 500;
+}
+#navbar ul li a{
+    color: black;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: white;
+    background-color: black;
+}
+#name{
+    padding-left: 5px;
+}
+#lout{
+    background-color: red;
+    display: block;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-right: 15px;
+    border: 2px solid black;
+}
+#heading{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 900;
+    color: rgb(70, 70, 70);
+}
+.form-wrapper{
+    display: flex;
+    /* justify-content: center; */
+    align-self: flex-start;
+    width: 100%;
+}
+#view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+#left{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-left: 150px;
+}
+#right{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+section #view .total .inputBx{
+    margin-bottom: 20px;
+    display: flex;
+    width: 500px;
+    justify-content: end;
+    align-items: center;
+}
+section #view .total .inputBx span{
+    margin-bottom: 5px;
+    /* display: inline-block; */
+    /* display: flex; */
+    color: rgb(77, 77, 77);
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+    /* text-align: left; */
+    justify-content: start;
+    width: 100%;
+}
+input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 700;
+    border: 2px solid rgb(77, 77, 77);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: rgb(0, 70, 110);
+    background: transparent;
+    border-radius: 30px ;
+}
+#sign-in{
+    background: rgb(0, 197, 231);
+    color: black;
+    outline: none;
+    border: 2px solid rgb(77, 77, 77);
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+}
+#sign-in:hover{
+    color: white;
+    background: black;
+}
+body::before{
+    content: "";
+    background: url('/static/images/predict.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.2;
+}
+#output{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 900;
+    margin-top: 70px;
+    background-color: rgb(255, 112, 112);
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 30px;
+}

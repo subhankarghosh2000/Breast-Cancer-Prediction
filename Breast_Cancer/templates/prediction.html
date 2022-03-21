@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Page</title>
+    <link rel="stylesheet" href="/static/css/prediction.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo" class="logo-feature">
+            <img src="static/images/logo1.png" alt="HealingEquilibrium.com">
+        </div>
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="/about-us">About Us</a></li>
+            <li class="item"><a href="/contact-us">Contact Us</a></li>
+        </ul>
+        <ul class="item-right">
+            <li id="lout"><a href="/log-out">Log Out</a></li>
+            <li id="name"><p>Welcome, {{name}}</p></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <div id="main">
+            <p id="heading">Lets Predict</p>
+            <p style="font-family: 'Patrick Hand', cursive;margin-left: 150px; font-size: 1.2rem;">Please enter the required values:</p><br>
+            <form action="/prediction" id="view" method="post">
+                <div class="form-wrapper">
+                    <div id="left" class="total">
+                        <div class="inputBx">
+                            <span><b>Radius</b></span>
+                            <input type="text" name="radius" required>
+                        </div>
+                        <div class="inputBx">
+                            <span><b>Texture</b></span>
+                            <input type="text" name="texture" required>
+                        </div>
+                        <div class="inputBx">
+                            <span><b>Perimeter</b></span>
+                            <input type="text" name="perimeter" required>
+                        </div>
+                        <div class="inputBx">
+                            <span><b>Area</b></span>
+                            <input type="text" name="area" required>
+                        </div>
+                        <div class="inputBx">
+                            <span><b>Smoothness</b></span>
+                            <input type="text" name="smoothness" required>
+                        </div>
+                    </div>
+                    <div id="right" class="total">
+                        <div class="inputBx">
+                            <span><b>Compactness</b></span>
+                            <input type="text" name="compactness" required>
+                        </div>
+                        <div class="inputBx">
+                            <span><b>Concavity</b></span>
+                            <input type="text" name="concavity" required>
+                        </div>
+                        <div class="inputBx">
+                            <span><b>Concave Points</b></span>
+                            <input type="text" name="c_points" required>
+                        </div>
+                        <div class="inputBx">
+                            <span><b>Symmetry</b></span>
+                            <input type="text" name="symmetry" required>
+                        </div>
+                        <div class="inputBx">
+                            <span><b>Fractal Dimension</b></span>
+                            <input type="text" name="f_dimension" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputBx">
+                    <input id="sign-in" type="submit" value="Submit" name="">
+                </div>
+            </form>
+            <!-- {% if output %} -->
+            <div id="output">
+                <br>
+                <p>{{output}}</p>
+                <br> 
+            </div>
+            <!-- {% endif %} -->
+        </div>
+    </section>
+    
+</body>
+</html>

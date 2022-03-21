@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/static/css/contact_us.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo" class="logo-feature">
+            <img src="static/images/logo1.png" alt="HealingEquilibrium.com">
+        </div>
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="/about-us">About Us</a></li>
+            {% if current_user.is_authenticated %}
+            <li class="item"><a href="/prediction">Prediction</a></li>
+            {% endif %}
+        </ul>
+        {% if not current_user.is_authenticated %}
+        <ul id="item-right1">
+            <li><a href="/log-in">Sign In</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+        </ul>
+        {% else %}
+        <ul id="item-right2">
+            <li id="lout"><a href="/log-out">Log Out</a></li>
+            <li id="name"><p>Welcome, {{current_user.username}}</p></li>
+        </ul>
+        {% endif %}
+    </nav>
+    <section>
+        <div class="imgBx">
+            <img src="static/images/pexels-anna-shvets-4225880.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Contact Us</h2>
+                <form action="/contact-us" method="post">
+                    <div class="inputBx">
+                        <span><b>Name</b></span>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="inputBx">
+                        <span><b>Email</b></span>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="inputBx">
+                        <span><b>Subject</b></span>
+                        <input type="text" name="subject" required>
+                    </div>
+                    <div class="inputBx">
+                        <span><b>Your Message</b></span>
+                        <textarea name="message" placeholder="Write your message here ....." required></textarea>
+                    </div>
+                    <div class="inputBx">
+                        <input id="sign-in" type="submit" value="Submit" name="">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

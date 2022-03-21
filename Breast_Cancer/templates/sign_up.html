@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="/static/css/sign_up.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo" class="logo-feature">
+            <img src="static/images/logo1.png" alt="HealingEquilibrium.com">
+        </div>
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="/about-us">About Us</a></li>
+            <li class="item"><a href="/contact-us">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="imgBx">
+            <img src="static/images/pexels-anna-shvets-3844581.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Sign Up</h2>
+                <form action="/sign-up" method="post">
+                    <div class="inputBx">
+                        <span><b>Username</b></span>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="inputBx">
+                        <span><b>Email</b></span>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="inputBx">
+                        <span><b>Password</b></span>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="inputBx">
+                        <span><b>Confirm Password</b></span>
+                        <input type="password" name="cpassword" required>
+                    </div>
+                    <!-- <div class="remember">
+                        <label><input type="checkbox" name=""><b> Remember me</b></label>
+                    </div> -->
+                    <div class="inputBx">
+                        <input id="sign-in" type="submit" value="Sign Up" name="">
+                    </div>
+                    <div class="inputBx">
+                        <p><b>Already have an account?</b><a href="/log-in"><b> Sign in</b></a></p>
+                    </div>
+                </form>
+                <h3><b>Sign up with social media</b></h3>
+                <ul class="icons">
+                    <li><img src="static/images/facebook.png"></li>
+                    <li><img src="static/images/google.png"></li>
+                    <li><img src="static/images/linkedin.png"></li>
+                    <li><img src="static/images/twitter.png"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    {% if alert %}
+    <script>
+        alert("This email id already exists\nUse a new email id or go to login page.");
+    </script>
+    {% endif %}
+    {% if password %}
+    <script>
+        alert("Use 8 characters or more for your password.");
+    </script>
+    {% endif %}
+    {% if mismatch %}
+    <script>
+        alert("Those passwords didn't match. Try again.");
+    </script>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#item-right1{
+    padding-left: 890px;
+}
+#item-right2{
+    padding-left: 480px;
+}
+#navbar ul li.item{
+    padding-left: 10px;
+}
+.logo-feature img{
+    border-radius: 50%;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* width: 100vw; */
+}
+#logo{
+    margin: 5px 20px;
+}
+#logo img{
+    height: 70px;
+    margin: 1px 1px;
+}
+ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color:blueviolet;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    font-family: 'Special Elite', cursive;
+}
+#navbar ul li a{
+    color: black;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: white;
+    background-color: black;
+}
+section{
+    position :relative;
+    width: 100%;
+    height: 88.5vh;
+    display: flex;
+}
+
+section .imgBx{
+    position: relative;
+    width: 50%;
+    height: 100% ;
+}
+section .imgBx::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,#ff538d,#47c5ff);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+section .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+section .contentBx{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 233, 250, 0.856);
+}
+
+section .contentBx .formBx{
+    width: 50%;
+}
+section .contentBx .formBx h2{
+    color:rgb(77, 77, 77);
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid rgb(0, 182, 214);
+    display: inline-block;
+    letter-spacing: 1px;
+}
+section .contentBx .formBx .inputBx{
+    margin-bottom: 20px;
+}
+section .contentBx .formBx .inputBx span{
+    margin-bottom: 5px;
+    display: inline-block;
+    color: rgb(77, 77, 77);
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+section .contentBx .formBx .inputBx input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 700;
+    border: 2px solid rgb(77, 77, 77);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: rgb(0, 70, 110);
+    background: transparent;
+    border-radius: 30px ;
+}
+section .contentBx .formBx .inputBx input[type="submit"]{
+    width: 111.5%;
+    background: rgb(0, 197, 231);
+    color: black;
+    outline: none;
+    border: 2px solid rgb(77, 77, 77);
+    font-weight: 500;
+    cursor: pointer;
+}
+#sign-in{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#sign-in:hover{
+    color: white;
+}
+section .contentBx .formBx .inputBx input[type="submit"]:hover{
+    background: black;
+}
+
+section .contentBx .formBx .inputBx textarea{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 700;
+    border: 2px solid rgb(77, 77, 77);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: rgb(0, 70, 110);
+    background: transparent;
+    border-radius: 30px ;
+    height: 150px;
+}
+
+#name{
+    padding-left: 5px;
+}
+#lout{
+    background-color: red;
+    display: block;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-right: 15px;
+    border: 2px solid black;
+}
