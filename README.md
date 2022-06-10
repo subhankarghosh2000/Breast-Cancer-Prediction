@@ -27,5 +27,5 @@ python app.py
 ```
 Go Ahead!!
 ## Authors
-- [@subhankarghosh2000](https://github.com/subhankarghosh2000)
-- [@ChitrangadaSarkar](https://github.com/ChitrangadaSarkar)
+- [Subhankar Ghosh](https://github.com/subhankarghosh2000)
+- [Chitrangada Sarkar](https://github.com/ChitrangadaSarkar)
