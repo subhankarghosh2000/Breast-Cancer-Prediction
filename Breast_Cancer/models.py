@@ -12,3 +12,6 @@ class Doctor(db.Model,UserMixin):
     password=db.Column(db.String(20))
     def __repr__(self) -> str:
         return '<Doctor %r>' % self.username
+
+
+        
