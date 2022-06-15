@@ -26,6 +26,3 @@ pip install -r requirements.txt
 python app.py
 ```
 Go Ahead!!
-## Authors
-- [Subhankar Ghosh](https://github.com/subhankarghosh2000)
-- [Chitrangada Sarkar](https://github.com/ChitrangadaSarkar)
